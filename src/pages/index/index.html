@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Delivery</title>
+    <link rel="stylesheet" href="/src/shared/normalize.css" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="header">
+        <div class="delivery">
+            <img src="/assets/icons/box.png" alt="" />
+            <p>Delivery</p>
+        </div>
+        <div class="header-icon">
+            <div class="two-icon">
+                <img src="/assets/icons/arrow.svg" alt="" />
+                <img src="/assets/icons/profile.svg" alt="" />
+            </div>
+            <div class="sign-out">
+                <button type="submit" class="btn-sign_out">Выйти</button>
+                <img src="/assets/icons/sign-out.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <div class="main-div">
+        <div class="left-delivery">
+            <p class="heading-delivery">Рассчитать доставку</p>
+            <div class="left-wrapper">
+                <p class="heading">Город отправки</p>
+                <div class="city-sending">
+                    <div class="find-city">
+                        <span class="green-ring"></span>
+                        <p class="city-heading">Москва</p>
+                    </div>
+                    <img src="/assets/icons/Vector.svg" alt="" />
+                </div>
+                <div class="wrapper-city_list">
+                    <a href="" class="color-city_list">Санкт Петербург</a>
+                    <a href="" class="color-city_list">Новосибирск</a>
+                    <a href="" class="color-city_list">Томск</a>
+                </div>
+            </div>
+            <div class="left-wrapper">
+                <p class="heading">Город назначения</p>
+                <div class="city-sending">
+                    <div class="find-city">
+                        <span class="black-ring"></span>
+                        <p class="city-heading">Санкт-Петербург</p>
+                    </div>
+                    <img src="/assets/icons/Vector.svg" alt="" />
+                </div>
+                <div class="wrapper-city_list">
+                    <a href="" class="color-city_list">Новосибирск</a>
+                    <a href="" class="color-city_list">Томск</a>
+                    <a href="" class="color-city_list">Москва</a>
+                </div>
+            </div>
+            <p class="heading">Размер посылки</p>
+            <div class="wrapper-city_sending">
+                <div class="city-sending city-open">
+                    <div class="find-city">
+                        <p class="city-heading">Конверт</p>
+                    </div>
+                    <img src="/assets/icons/Vector.svg" alt="" />
+                </div>
+                <div class="size-box_list">
+                    <div class="tabs">
+                        <div class="tab active" id="approx-tab">
+                            <p>Примерные</p>
+                        </div>
+                        <div class="tab" id="exact-tab">
+                            <p>Точные</p>
+                        </div>
+                    </div>
+                    <div class="exact-size">
+                        <div class="lenght">
+                            <p>Длина</p>
+                            <input type="text" placeholder="См" class="wrapper-box_size">
+                        </div>
+                        <div class="size-boxes">
+                            <p>Ширина</p>
+                            <input type="text" placeholder="См" class="wrapper-box_size">
+                        </div>
+                        <div class="size-boxes">
+                            <p>Высота</p>
+                            <input type="text" placeholder="См" class="wrapper-box_size">
+                        </div>
+                        <div class="size-boxes">
+                            <p>Вес</p>
+                            <input type="text" placeholder="См" class="wrapper-box_size">
+                        </div>
+                    </div>
+                    <div class="selection-container" id="box-selection">
+                        <div class="wrapper-box_list">
+                            <div class="size-list" id="size-list">
+                                <img src="/assets/icons/Cards.svg" alt="">
+                                <div class="text-size_list">
+                                    <p>Конверт</p>
+                                    <p class="text-size_list__child">42х36х5 см</p>
+                                </div>
+                            </div>
+                            <div class="point"></div>
+                        </div>
+                        <div class="wrapper-box_list">
+                            <div class="size-list">
+                                <img src="/assets/icons/Box_xs.svg" alt="">
+                                <div class="text-size_list">
+                                    <p>Короб XS</p>
+                                    <p class="text-size_list__child">17х12х9 см</p>
+                                </div>
+                            </div>
+                            <div class="point"></div>
+                        </div>
+                        <div class="wrapper-box_list">
+                            <div class="size-list">
+                                <img src="/assets/icons/box_s.svg" alt="">
+                                <div class="text-size_list">
+                                    <p>Короб S</p>
+                                    <p class="text-size_list__child">23х9х10 см</p>
+                                </div>
+                            </div>
+                            <div class="point"></div>
+                        </div>
+                        <div class="wrapper-box_list">
+                            <div class="size-list">
+                                <img src="/assets/icons/box_m.svg" alt="">
+                                <div class="text-size_list">
+                                    <p>Короб M</p>
+                                    <p class="text-size_list__child">33х25х15 см</p>
+                                </div>
+                            </div>
+                            <div class="point"></div>
+                        </div>
+                        <div class="wrapper-box_list">
+                            <div class="size-list">
+                                <img src="/assets/icons/box_l.svg" alt="">
+                                <div class="text-size_list">
+                                    <p>Короб L</p>
+                                    <p class="text-size_list__child">32х25х38 см</p>
+                                </div>
+                            </div>
+                            <div class="point"></div>
+                        </div>
+                        <div class="wrapper-box_list">
+                            <div class="size-list">
+                                <img src="/assets/icons/box_xl.svg" alt="">
+                                <div class="text-size_list">
+                                    <p>Короб XL</p>
+                                    <p class="text-size_list__child">60х35х30 см</p>
+                                </div>
+                            </div>
+                            <div class="point"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="vector-wrapper">
+                <p class="heading">Расчитать</p>
+                <img src="/assets/icons/Card/lucide/Vector.svg" alt="" />
+            </div>
+        </div>
+        <img src="/assets/icons/ecb2bdc9-85c4-4e0f-b64b-e933a6452d94@2x 1.png" alt="" class="image-delivery" />
+        <div class="wrapper-free_delivery">
+            <div class="free-delivery_text">
+                <p>Бесплатная доставка</p>
+                <p class="free-child-text">за приведенного друга</p>
+            </div>
+            <div class="handshake">
+                <img src="/assets/icons/handshake.svg" alt="">
+            </div>
+        </div>
+        <div class="wrapper-order">
+            <p class="text-size_list">Отследить посылку</p>
+            <div class="find-order_wrapper">
+                <input type="text" name="" id="" placeholder="Номер заказа" class="find-order">
+                <button class="button-order_find">Найти</button>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
