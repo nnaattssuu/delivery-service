@@ -17,7 +17,7 @@ approxTab.addEventListener("click", () => {
     exactSize.classList.remove("active")
 })
 
-const boxes = document.querySelectorAll(".wrapper-box_list");
+const boxes = document.querySelectorAll(".size-variants-list");
 
 boxes.forEach(box => {
     box.addEventListener("click", () => {
@@ -26,13 +26,11 @@ boxes.forEach(box => {
     });
 });
 
-const citySending = document.querySelectorAll(".city-open")
-const sizeBox = document.querySelector(".size-box_list")
+const citySending = document.querySelector("#size-selector")
+const sizeWindow = document.querySelector(".size-window")
 
-citySending.forEach(item => {
-    item.addEventListener("click", () => {
-        sizeBox.classList.toggle("open")
-    })
+citySending.addEventListener("click", () => {
+    sizeWindow.classList.toggle("open")
 })
 
 

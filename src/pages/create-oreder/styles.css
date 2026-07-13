@@ -61,7 +61,7 @@
   cursor: pointer;
 }
 
-.btn-sign_out {
+.btn-sign-out {
   cursor: pointer;
   background: none;
   border: none;
@@ -125,14 +125,14 @@
   background-color: #f3f3f3;
 }
 
-.font-type_delivery{
+.font-type-delivery{
   font-size: 14px;
   margin-top: 16px;
   color: gray;
   opacity: 70%;
 }
 
-.font-wrapper_delivery{
+.font-wrapper-delivery{
   font-size: 18px;
   margin-top: 16px;
 }
@@ -183,7 +183,7 @@
   cursor: pointer;
 }
 
-.font-headline_delivery{
+.font-headline-delivery{
   opacity: 50%;
 }
 
