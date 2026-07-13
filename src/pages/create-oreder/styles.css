@@ -27,7 +27,7 @@
   font-size: 16px;
 }
 
-.heading-delivery {
+.heading-text {
   font-size: 24px;
 }
 
@@ -56,7 +56,7 @@
   cursor: pointer;
 }
 
-.btn-sign-out {
+.button-sign-out {
   cursor: pointer;
   background: none;
   border: none;
@@ -97,11 +97,11 @@
   height: 4px;
 }
 
-.font-progress{
+.step-title{
   margin-bottom: 4px;
 }
 
-.font-delivery{
+.page-title{
   font-size: 24px;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -120,16 +120,16 @@
   background-color: #f3f3f3;
 }
 
-.font-type-delivery{
+.delivery-info-label{
   font-size: 14px;
-  margin-top: 16px;
   color: gray;
+  padding-top: 16px;
+  margin-bottom: 2px;
   opacity: 70%;
 }
 
-.font-wrapper-delivery{
+.delivery-info{
   font-size: 18px;
-  margin-top: 16px;
 }
 
 .input-wrapper{
@@ -285,11 +285,11 @@
 }
 
 
-.font-check-data{
+.check-data-title{
   margin-top: 8px;
 }
 
-.font-total-sum{
+.font-size-total-sum{
   font-size: 32px;
   font-weight: bold;
 }
@@ -298,7 +298,7 @@
   padding-bottom: 16px;
 }
 
-.btn-edit-data{
+.button-edit-data{
   margin-top: 16px;
   display: flex;
   align-items: center;
@@ -312,11 +312,12 @@
   width: 100%;
 }
 
-.font-heading-delivery{
+.font-heading-text{
   margin-top: 24px;
+  margin-bottom: 16px;
 }
 
-.btn-actions{
+.button-actions{
   margin-top: 178px;
 }
 
@@ -327,11 +328,11 @@
   gap: 16px;
 }
 
-.btn-main-page{
+.button-main-page{
   margin-top: 16px;
 }
 
-.accept-delivery{
+.order-complete{
   background-image: url(/assets/icons/Accept.svg);
   background-color: #22c55e;
   background-position: 50%;

@@ -1,4 +1,4 @@
-const redirectToEditButton = document.querySelector(".btn-edit-data")
+const redirectToEditButton = document.querySelector(".button-edit-data")
 const redirectButton = document.querySelector("#button-continue")
 
 redirectToEditButton.addEventListener("click", () => {
@@ -6,7 +6,7 @@ redirectToEditButton.addEventListener("click", () => {
 })
 
 redirectButton.addEventListener("click", () => {
-        location.href = "step-complite.html"
+        location.href = "step-complete.html"
 })
 
 

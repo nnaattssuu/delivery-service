@@ -28,7 +28,7 @@
   font-size: 16px;
 }
 
-.heading-delivery {
+.heading-text {
   margin-bottom: 24px;
   font-size: 24px;
 }
@@ -57,7 +57,7 @@
   cursor: pointer;
 }
 
-.btn-sign-out {
+.button-sign-out {
   cursor: pointer;
   background: none;
   border: none;
@@ -148,8 +148,9 @@
   height: 100%;
 }
 
-.free-delivery-text{
-  color:white
+.promotion-text{
+  color:white;
+  font-size: 32px;
 }
 
 .delivery-promotions {
@@ -201,7 +202,7 @@
 }
 
 
-.free-child-text {
+.promotion-text-label {
   font-size: 24px;
   opacity: 80%;
 }
