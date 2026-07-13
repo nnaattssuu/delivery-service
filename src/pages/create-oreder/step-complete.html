@@ -4,25 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>step-complite</title>
+    <title>Delivery | Успех</title>
     <link rel="stylesheet" href="/src/pages//create-oreder/styles.css">
     <link rel="stylesheet" href="/src/shared/normalize.css">
 </head>
 
 <body>
     <div class="header">
-        <div class="delivery">
+        <div class="logotype">
             <img src="/assets/icons/box.png" alt="" />
             <p>Delivery</p>
         </div>
-        <div class="header-icon">
-            <div class="two-icon">
+        <div class="header-actions">
                 <img src="/assets/icons/arrow.svg" alt="" />
                 <img src="/assets/icons/profile.svg" alt="" />
-            </div>
             <div class="sign-out">
-                <button type="submit" class="btn-sign_out">Выйти</button>
-                <img src="/assets/icons/sign-out.png" alt="" />
+                <button type="submit" class="btn-sign-out">Выйти</button>
+                <img src="/assets/icons/icon-sign-out.svg" alt="" />
             </div>
         </div>
     </div>
@@ -38,50 +36,50 @@
                 <p class="heading-delivery font-heading-delivery" >Ваш заказ</p>
                 <div class="data-wrapper-child">
                     <div class="">
-                        <div class="font-wrapper_delivery">
-                            <p class="font-type_delivery">Тип доставки</p>
+                        <div class="font-wrapper-delivery">
+                            <p class="font-type-delivery">Тип доставки</p>
                             <p>Экспресс доставка</p>
                         </div>
-                        <div class="font-wrapper_delivery">
-                            <p class="font-type_delivery">Получатель</p>
+                        <div class="font-wrapper-delivery">
+                            <p class="font-type-delivery">Получатель</p>
                             <p>Климов Алексей Алексеевич, +7 999 999 99 99</p>
                         </div>
-                        <div class="font-wrapper_delivery">
-                            <p class="font-type_delivery">Отправитель</p>
+                        <div class="font-wrapper-delivery">
+                            <p class="font-type-delivery">Отправитель</p>
                             <p>Иванов Иван Иванович, +7 999 123 45 67</p>
                         </div>
                     </div>
                     <div>
-                        <div class="font-wrapper_delivery">
-                            <p class="font-type_delivery">Откуда забрать</p>
+                        <div class="font-wrapper-delivery">
+                            <p class="font-type-delivery">Откуда забрать</p>
                             <p>г. Москва, ул. Новорогожская, д. 24, кв. 17</p>
                         </div>
-                        <div class="font-wrapper_delivery">
-                            <p class="font-type_delivery">Куда доставить</p>
+                        <div class="font-wrapper-delivery">
+                            <p class="font-type-delivery">Куда доставить</p>
                             <p>г. Санкт-Петербург, ул. Евдокима Огнева, д. 19, кв. 40</p>
                         </div>
                         <div class="wrapper-delivery-check">
-                            <p class="font-type_delivery">Примечание</p>
+                            <p class="font-type-delivery">Примечание</p>
                             <p>Оставить заказ у двери</p>
                         </div>
                         <div class="delivery-payment.active">
-                            <p class="font-type_delivery">Кто оплачивает доставку</p>
+                            <p class="font-type-delivery">Кто оплачивает доставку</p>
                             <p id="selection-switch">Получатель</p>
                         </div>
                     </div>
-                </div>
-                <div class="total-sum">
-                    <p class="font-total-sum">Итого: 780 ₽</p>
-                    <p>Вся информация была продублирована в SMS</p>
+                    <div class="total-sum">
+                        <p class="font-total-sum">Итого: 780 ₽</p>
+                        <p>Вся информация была продублирована в SMS</p>
+                    </div>
                 </div>
             </div>
-            <div class="btn-actions-end">
-                <button class="button-back">Статус заявки</button>
-                <button class="button-continue btn-main-page">На главную</button>
+            <div class="order-navigation half-width" >
+                    <button class="action-button active">Статус заявки</button>
+                    <button class="action-button" id="main-page-link">На главную</button>
             </div>
         </div>
     </div>
-        <script src="step-complite.js"></script>
+        <script src="step-complete.js"></script>
 </body>
 
 </html>

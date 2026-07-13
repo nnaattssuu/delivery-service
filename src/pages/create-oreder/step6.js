@@ -1,16 +1,16 @@
-const inputCircle = document.querySelectorAll(".input-circle")
+const initiatorCheckbox = document.querySelectorAll(".initiator-checkbox")
 const deliveryPayment = document.querySelector(".delivery-payment")
 const sender = document.getElementById("sender")
 const recipient = document.getElementById("recipient")
 const selectionSwitch = document.getElementById("selection-switch")
 const recipientId = recipient.getAttribute("id")
 const senderId = sender.getAttribute("id")
-const step6 = document.querySelector(".button-continue")
+const redirectButton = document.querySelector("#button-continue")
 
 
-inputCircle.forEach(item => {
+initiatorCheckbox.forEach(item => {
     item.addEventListener("click", () => {
-        inputCircle.forEach((inputItem) => {
+        initiatorCheckbox.forEach((inputItem) => {
             inputItem.classList.remove("active")
         })
         item.classList.add("active")
@@ -24,7 +24,7 @@ inputCircle.forEach(item => {
     })
 })
 
-step6.addEventListener("click", () => {
+redirectButton.addEventListener("click", () => {
     location.href = "step7.html"
 })
 

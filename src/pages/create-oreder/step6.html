@@ -4,25 +4,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>step6</title>
+    <title>Delivery | Шаг 6</title>
     <link rel="stylesheet" href="/src/pages//create-oreder/styles.css">
     <link rel="stylesheet" href="/src/shared/normalize.css">
 </head>
 
 <body>
     <div class="header">
-        <div class="delivery">
+        <div class="logotype">
             <img src="/assets/icons/box.png" alt="" />
             <p>Delivery</p>
         </div>
-        <div class="header-icon">
-            <div class="two-icon">
+        <div class="header-actions">
                 <img src="/assets/icons/arrow.svg" alt="" />
                 <img src="/assets/icons/profile.svg" alt="" />
-            </div>
             <div class="sign-out">
                 <button type="submit" class="btn-sign-out">Выйти</button>
-                <img src="/assets/icons/sign-out.png" alt="" />
+                <img src="/assets/icons/icon-sign-out.svg" alt="" />
             </div>
         </div>
     </div>
@@ -49,19 +47,19 @@
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p class="delivery-type-label">Кто оплачивает доставку</p>
-                    <div class="checkbox-choice">
-                        <div class="input-circle" id="recipient"></div>
+                    <div class="delivery-initiator">
+                        <div class="initiator-checkbox" id="recipient"></div>
                         <p>Получатель</p>
                     </div>
-                    <div class="checkbox-choice">
-                        <div class="input-circle" id="sender"></div>
+                    <div class="delivery-initiator">
+                        <div class="initiator-checkbox" id="sender"></div>
                         <p>Отправитель</p>
                     </div>
                 </div>
             </div>
             <div class="button-actions btn-actions">
-                <button class="button-back">Назад</button>
-                <button class="button-continue">Продолжить</button>
+                <button class="action-button active">Назад</button>
+                <button class="action-button" id="button-continue">Продолжить</button>
             </div>
         </div>
         <div class="delivery-wrapper">

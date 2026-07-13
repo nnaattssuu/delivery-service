@@ -2,7 +2,7 @@ const closeHook = document.querySelector(".close")
 const checkboxWrapper = document.querySelector(".checkbox-wrapper")
 const hookWrapper = document.querySelector(".hook-wrapper")
 const square = document.querySelector(".square")
-const step5 = document.querySelector(".button-continue")
+const redirectButton = document.querySelector("#button-continue")
 
 checkboxWrapper.addEventListener("click", () => {
     hookWrapper.classList.add("active")
@@ -21,6 +21,6 @@ checkboxDelivery.addEventListener("click", () => {
     wrapperDelivery.classList.toggle("active")
 })
 
-step5.addEventListener("click", () => {
+redirectButton.addEventListener("click", () => {
     location.href = "step6.html"
 })

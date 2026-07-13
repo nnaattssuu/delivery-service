@@ -1,5 +1,5 @@
-const step4 = document.querySelector(".button-continue")
+const redirectButton = document.querySelector("#button-continue")
 
-step4.addEventListener("click", () => {
+redirectButton.addEventListener("click", () => {
     location.href = "step5.html"
 })

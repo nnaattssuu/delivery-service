@@ -33,23 +33,17 @@
   font-size: 24px;
 }
 
-.delivery {
+.logotype {
   display: flex;
   align-items: center;
   gap: 4px;
   font-size: 16px;
 }
 
-.header-icon {
+.header-actions {
   display: flex;
   align-items: center;
   gap: 24px;
-}
-
-.two-icon {
-  display: flex;
-  align-items: center;
-  gap: 16px;
 }
 
 .sign-out {
@@ -71,7 +65,7 @@
   color: white;
 }
 
-.main-div {
+.content-grid {
   font-family: "Nunito", sans-serif;
   margin: 0 auto;
   width: 80%;
@@ -154,7 +148,11 @@
   height: 100%;
 }
 
-.wrapper-free-delivery {
+.free-delivery-text{
+  color:white
+}
+
+.delivery-promotions {
   display: flex;
   align-items: center;
   background-color: #22c55e;
@@ -165,10 +163,6 @@
   padding: 32px;
 }
 
-.find-nummer_order {
-  display: flex;
-  align-items: center;
-}
 
 
 .find-order-wrapper {
@@ -199,7 +193,8 @@
   padding: 32px;
 }
 
-.free-deliver_text {
+
+.free-deliver-text {
   padding-left: 32px;
   font-size: 32px;
   color: white;
