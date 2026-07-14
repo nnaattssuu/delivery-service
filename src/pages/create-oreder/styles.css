@@ -290,6 +290,7 @@
 }
 
 .font-size-total-sum{
+  margin-top: 33px;
   font-size: 32px;
   font-weight: bold;
 }
@@ -317,7 +318,7 @@
   margin-bottom: 16px;
 }
 
-.button-actions{
+.button-actions.active{
   margin-top: 178px;
 }
 
