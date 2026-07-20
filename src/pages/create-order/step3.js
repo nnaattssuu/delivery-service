@@ -1,0 +1,39 @@
+
+const redirectButton = document.querySelector("#button-continue")
+const firstnameId = document.querySelector("#firstname")
+const lastnameId = document.querySelector("#lastname")
+const middlenameId = document.querySelector("#middlename")
+const phonenummerId = document.querySelector("#phonenummer")
+const deliveryWrapper = document.querySelectorAll(".delivery-wrapper")
+const userData = JSON.parse(localStorage.getItem("userData"))
+const deliveryInfo = document.querySelector(".delivery-info")
+const availablelDeliveryTypes = JSON.parse(localStorage.getItem("availablelDeliveryTypes"))
+
+if(userData.optionType === "express"){
+    deliveryInfo.innerHTML += `
+    <p class="delivery-info-label">Тип доставки</p>
+    <p>${availablelDeliveryTypes[1].name}</p>
+    `
+} else if(userData.optionType === "default"){
+    deliveryInfo.innerHTML += `
+    <p class="delivery-info-label">Тип доставки</p>
+    <p>${availablelDeliveryTypes[0].name}</p>
+    `
+}
+    deliveryInfo.innerHTML += `
+    <p class="delivery-info-label">Получатель</p>
+    <p>${userData.receiver.lastname} ${userData.receiver.firstname} ${userData.receiver.middlename} ${userData.receiver.phone}</p>
+    `
+
+
+
+redirectButton.addEventListener("click", () => {
+    userData.sender = {
+        lastname: lastnameId.value,
+        firstname: firstnameId.value,
+        middlename: middlenameId.value,
+        phone: phonenummerId.value
+    }
+    localStorage.setItem("userData", JSON.stringify(userData))
+    location.href = "step4.html"
+})

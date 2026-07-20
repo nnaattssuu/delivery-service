@@ -251,9 +251,6 @@
 
 .data-wrapper-child{
   width: 100%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 40px;
 }
 
 .delivery-type-label{

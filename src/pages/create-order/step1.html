@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="step1.css">
-    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="/src/shared/normalize.css">
     <title>Delivery | Шаг 1</title>
 </head>
 
@@ -26,7 +26,6 @@
     </div>
     <div class="outer-wrapper">
         <div class="inner-wrapper">
-
             <div class=" type-delivery">
                 <img src="/assets/icons/house.svg" alt="">
                 <img src="/assets/icons/vector-right.svg" alt="">
@@ -43,22 +42,22 @@
                         <div class="plane-circle">
                             <img src="/assets/icons/plane.svg" alt="">
                         </div>
-                        <div>
-                            <p class="delivery-option">Экспресс-доставка до двери</p>
-                            <p class="heading-text">780 ₽</p>
-                            <p class="delivery-option active">1 рабочий день</p>
+                        <div class="express-delivery-value">
+                            <!-- <p class="delivery-option"></p>
+                            <p class="heading-text"></p>
+                            <p class="delivery-option active">1 рабочий день</p> -->
                         </div>
                     </div>
                     <img src="/assets/icons/vector-right.svg" alt="" class="vector-right">
                 </div>
             </div>
-            <div class="defoult-delivery-card">
-                <div class="express">
+            <div class="default-delivery-card">
+                <div class="delivery-card">
                     <div class="list-wrapper">
                         <div class="plane-circle">
                             <img src="/assets/icons/bus-front.svg" alt="">
                         </div>
-                        <div>
+                        <div class="default-delivery-value">
                             <p class="delivery-option">Обычная доставка</p>
                             <p class="heading-text">325 ₽</p>
                             <p class="delivery-option active">5 рабочих деней</p>
@@ -80,6 +79,7 @@
             </div>
         </div>
     </div>
+    <script src="step1.js"></script>
 </body>
 
 </html>

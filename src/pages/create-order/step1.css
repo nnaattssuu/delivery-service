@@ -100,14 +100,16 @@
   border-radius: 24px;
   width: 100%;
   padding: 16px;
+  cursor: pointer;
 }
 
-.defoult-delivery-card{
+.default-delivery-card{
   margin-top: 8px;
   border: 1px solid black;
   border-radius: 24px;
   width: 100%;
   padding: 16px;
+  cursor: pointer;
 }
 
 
@@ -171,6 +173,7 @@
   background-color: #6AC66A;
   border-radius: 24px;
   color: white;
+  cursor: pointer;
 }
 
 
