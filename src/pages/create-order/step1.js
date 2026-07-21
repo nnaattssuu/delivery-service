@@ -4,33 +4,34 @@ const availablelDeliveryTypes = JSON.parse(localStorage.getItem("availablelDeliv
 const expressDeliveryValue = document.querySelector(".express-delivery-value")
 const defaultDeliveryValue = document.querySelector(".default-delivery-value")
 const userData = JSON.parse(localStorage.getItem("userData"))
+const expressDeliveryItem = availablelDeliveryTypes[1] 
+const defualtDeliveryItem = availablelDeliveryTypes[0]
 
-
-console.log(availablelDeliveryTypes)
-
+function onMounted(){
 expressDeliveryValue.innerHTML = `
-<p class ="delivery-option">${availablelDeliveryTypes[1].name}</p>
-<p class="heading-text">${availablelDeliveryTypes[1].price} ₽</p>
-<p class="delivery-option active">${availablelDeliveryTypes[1].days} рабочих дня</p>
+<p class ="delivery-option">${expressDeliveryItem.name}</p>
+<p class="heading-text">${expressDeliveryItem.price} ₽</p>
+<p class="delivery-option active">${expressDeliveryItem.days} рабочих дня</p>
 `
 
 defaultDeliveryValue.innerHTML = `
-<p class="delivery-option">${availablelDeliveryTypes[0].name}</p>
-<p class="heading-text">${availablelDeliveryTypes[0].price}</p>
-<p class="delivery-option active">${availablelDeliveryTypes[0].days} рабочих дней</p>
+<p class="delivery-option">${defualtDeliveryItem.name}</p>
+<p class="heading-text">${defualtDeliveryItem.price}</p>
+<p class="delivery-option active">${defualtDeliveryItem.days} рабочих дней</p>
 `
-
+}
+onMounted()
 
 
 expressDelivery.addEventListener("click", () => {
   userData.optionType = "express"
-  console.log(localStorage.setItem("userData", JSON.stringify(userData)))
+  localStorage.setItem("userData", JSON.stringify(userData))
     location.href = "/src/pages/create-order/step2.html"
 })
 
 defaultDelivery.addEventListener("click", () => {
   userData.optionType = "default"
-  console.log(localStorage.setItem("userData", JSON.stringify(userData)))
+  localStorage.setItem("userData", JSON.stringify(userData))
     location.href = "/src/pages/create-order/step2.html"
     
 })

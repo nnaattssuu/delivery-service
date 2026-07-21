@@ -7,16 +7,19 @@ const userData = JSON.parse(localStorage.getItem("userData"))
 const deliveryInfo = document.querySelector(".delivery-info")
 const deliveryWrapper = document.querySelectorAll(".delivery-wrapper")
 const availablelDeliveryTypes = JSON.parse(localStorage.getItem("availablelDeliveryTypes"))
+const expressDeliveryItem = availablelDeliveryTypes[1] 
+const defualtDeliveryItem = availablelDeliveryTypes[0]
 
+function onMounted(){
 if(userData.optionType === "express"){
     deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Тип доставки</p>
-    <p>${availablelDeliveryTypes[1].name}</p>
+    <p>${expressDeliveryItem.name}</p>
     `
 } else if(userData.optionType === "default"){
     deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Тип доставки</p>
-    <p>${availablelDeliveryTypes[0].name}</p>
+    <p>${defualtDeliveryItem.name}</p>
     `
 }
 deliveryInfo.innerHTML += `
@@ -28,10 +31,10 @@ deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Отправитель</p>
     <p>${userData.sender.lastname} ${userData.sender.firstname} ${userData.sender.middlename} ${userData.sender.phone}</p>
     `
+}
+onMounted()
 
-
-
-redirectButton.addEventListener("click", () => {
+function setUpdateSenderAddressItem (){
     userData.senderAddress = {
         house: houseId.value,
         street: streetId.value,
@@ -39,5 +42,8 @@ redirectButton.addEventListener("click", () => {
         comment: commentId.value
     }
     localStorage.setItem("userData", JSON.stringify(userData))
+}
+redirectButton.addEventListener("click", () => {
+    setUpdateSenderAddressItem();
     location.href = "step5.html"
 })

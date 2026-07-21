@@ -10,61 +10,67 @@ const userData = JSON.parse(localStorage.getItem("userData"))
 const deliveryInfo = document.querySelector(".delivery-info")
 const deliveryWrapper = document.querySelectorAll(".delivery-wrapper")
 const availablelDeliveryTypes = JSON.parse(localStorage.getItem("availablelDeliveryTypes"))
+const expressDeliveryItem = availablelDeliveryTypes[1]
+const defualtDeliveryItem = availablelDeliveryTypes[0]
 
-if (userData.Type === "express") {
-    deliveryInfo.innerHTML += `
+function onMounted() {
+
+    if (userData.Type === "express") {
+        deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Тип доставки</p>
-    <p>${availablelDeliveryTypes[1].name}</p>
+    <p>${expressDeliveryItem.name}</p>
     `
-} else if (userData.optionType === "default") {
-    deliveryInfo.innerHTML += `
+    } else if (userData.optionType === "default") {
+        deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Тип доставки</p>
-    <p>${availablelDeliveryTypes[0].name}</p>
+    <p>${defualtDeliveryItem.name}</p>
     `
-}
-deliveryInfo.innerHTML += `
+    }
+    deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Получатель</p>
     <p>${userData.receiver.lastname} ${userData.receiver.firstname} ${userData.receiver.middlename} ${userData.receiver.phone}</p>
     `
-deliveryInfo.innerHTML += `
+    deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Отправитель</p>
     <p>${userData.sender.lastname} ${userData.sender.firstname} ${userData.sender.middlename} ${userData.sender.phone}</p>
     `
-deliveryInfo.innerHTML += `
+    deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Откуда забрать</p>
     <p>${userData.senderAddress.street} ${userData.senderAddress.house} ${userData.senderAddress.apartment} ${userData.senderAddress.comment}</p>
     `
-deliveryInfo.innerHTML += `
+    deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Куда доставить</p>
     <p>${userData.receiverAddress.street} ${userData.receiverAddress.house} ${userData.receiverAddress.apartment} ${userData.receiverAddress.comment}</p>
     `
-if (userData.receiverAddress.isNonContact === true) {
-    deliveryInfo.innerHTML += `
+    if (userData.receiverAddress.isNonContact === true) {
+        deliveryInfo.innerHTML += `
         <p class="delivery-info-label">Примечание</p>
         <p>${userData.receiverAddress.isNonContact = "Оставить заказ у двери"}</p>
         `
+    }
+    function setItiratonCheckBoxItem() {
+    }
+    initiatorCheckbox.forEach(item => {
+        item.addEventListener("click", () => {
+            initiatorCheckbox.forEach((inputItem) => {
+                inputItem.classList.remove("active")
+            })
+            item.classList.add("active")
+            deliveryPayment.classList.add("active")
+            const itemId = item.getAttribute("id")
+            if (itemId === recipientAttributeId) {
+                selectionSwitch.textContent = "Получатель"
+
+            } else if (itemId === senderAttributeId) {
+                selectionSwitch.textContent = "Отправитель"
+            }
+        })
+    })
 }
 
+onMounted()
 
-
-initiatorCheckbox.forEach(item => {
-    item.addEventListener("click", () => {
-        initiatorCheckbox.forEach((inputItem) => {
-            inputItem.classList.remove("active")
-        })
-        item.classList.add("active")
-        deliveryPayment.classList.add("active")
-        const itemId = item.getAttribute("id")
-        if (itemId === recipientAttributeId) {
-            selectionSwitch.textContent = "Получатель"
-
-        } else if (itemId === senderAttributeId) {
-            selectionSwitch.textContent = "Отправитель"
-        }
-    })
-})
-
-redirectButton.addEventListener("click", () => {
+function setPayerItem() {
     if (recipientId.classList.contains("active")) {
         userData.payer = "receiver"
         localStorage.setItem("userData", JSON.stringify(userData))
@@ -73,6 +79,10 @@ redirectButton.addEventListener("click", () => {
         userData.payer = "sender"
         localStorage.setItem("userData", JSON.stringify(userData))
     }
+}
+
+redirectButton.addEventListener("click", () => {
+    setPayerItem()
     location.href = "step7.html"
 })
 

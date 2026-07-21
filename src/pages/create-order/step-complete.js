@@ -3,7 +3,9 @@ const deliveryInfo = document.querySelector(".delivery-info")
 const totalSum = document.querySelector("#total-sum")
 const userData = JSON.parse(localStorage.getItem("userData"))
 const availablelDeliveryTypes = JSON.parse(localStorage.getItem("availablelDeliveryTypes"))
-
+const expressDeliveryItem = availablelDeliveryTypes[1] 
+const defualtDeliveryItem = availablelDeliveryTypes[0]
+function onMounted(){
 deliveryInfo.innerHTML += `
 <p class="delivery-info-label">Номер заказа</p>
 <p>aasdsds</p>
@@ -12,13 +14,12 @@ deliveryInfo.innerHTML += `
 if (userData.Type === "express") {
         deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Тип доставки</p>
-    <p>${availablelDeliveryTypes[1].name}</p>
+    <p>${expressDeliveryItem.name}</p>
     `
-
 } else if (userData.optionType === "default") {
         deliveryInfo.innerHTML += `
     <p class="delivery-info-label">Тип доставки</p>
-    <p>${availablelDeliveryTypes[0].name}</p>
+    <p>${defualtDeliveryItem.name}</p>
     `
 }
 
@@ -60,21 +61,13 @@ if (userData.payer === "sender"){
         `
 }
 if(userData.optionType === "express"){
-        totalSum.textContent = `Итого: ${availablelDeliveryTypes[1].price}`
+        totalSum.textContent = `Итого: ${expressDeliveryItem.price}`
 } else if (userData.optionType === "default"){
-        totalSum.textContent = `Итого: ${availablelDeliveryTypes[0].price}`
+        totalSum.textContent = `Итого: ${defualtDeliveryItem}.price}`
 }
+}
+onMounted()
 
 redirectButton.addEventListener("click", () => {
     location.href = "../index/index.html"
 })
-
-async function getOrders() {
-    const response = await fetch("https://juniorsbootcamp.ru/api/delivery/orders", {
-        method: "GET" , 
-        headers: {
-            "Authorization": "Bearer YOUR_SECRET_TOKEN"
-        } 
-    })
-    const result = await response.json()
-}

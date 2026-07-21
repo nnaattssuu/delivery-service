@@ -8,9 +8,7 @@ const itemCard = document.createElement("div");
 const boxes = document.querySelectorAll(".size-variants-list");
 const sizeSelector = document.querySelector("#size-selector");
 const sizeWindow = document.querySelector(".size-window");
-const initiatorCityDropdown = document.querySelector(
-  "#initiator-city-dropdown",
-);
+const initiatorCityDropdown = document.querySelector("#initiator-city-dropdown",);
 const citySending = document.querySelector("#city-sending");
 const targetCitySending = document.querySelector("#target-city-sending");
 const targetCityDropdown = document.querySelector("#target-city-dropdown");
@@ -26,55 +24,54 @@ let weightDelivery = null;
 let heightDelivery = null;
 let idPoint = null
 const userData = {
-    _id: "string",
-    price: 1,
+    price: null,
     package: {
-      id: "envelope",
-      name: "name",
-      length: "length",
-      width: "width",
-      weight: "weight",
-      height: "length",
+      id: null,
+      name: null,
+      length: null,
+      width: null,
+      weight: null,
+      height: null,
     },
-    optionType: "default",
+    optionType: null,
     senderPoint: {
-      id: "1",
-      name: "name",
-      latitude: "latitude",
-      longitude: "longitude",
+      id: null,
+      name: null,
+      latitude: null,
+      longitude: null,
     },
     senderAddress: {
-      street: "street",
-      house: "house",
-      apartment: "apartment",
-      comment: "comment",
+      street: null,
+      house: null,
+      apartment: null,
+      comment: null,
     },
     sender: {
-      firstname: "firstname",
-      lastname: "lastname",
-      middlename: "middlename",
-      phone: "89990009999",
+      firstname: null,
+      lastname: null,
+      middlename: null,
+      phone: null,
     },
     receiverPoint: {
-      id: "1",
-      name: "name",
-      latitude: "latitude",
-      longitude: "longitude",
+      id: null,
+      name: null,
+      latitude: null,
+      longitude: null,
     },
     receiverAddress: {
-      street: "street",
-      house: "house",
-      apartment: "apartment",
-      comment: "comment",
-      isNonContact: true,
+      street: null,
+      house: null,
+      apartment: null,
+      comment: null,
+      isNonContact: null,
     },
     receiver: {
-      firstname: "firstname",
-      lastname: "lastname",
-      middlename: "middlename",
-      phone: "89990009999",
+      firstname: null,
+      lastname: null,
+      middlename: null,
+      phone: null,
     },
-    payer: "sender",
+    payer: null,
     status: "in_processing",
     cancellable: true,
   }
@@ -139,23 +136,26 @@ async function getPoints() {
       const changeCity = document.querySelector("#change-city");
       const targetChangeCity = document.querySelector("#target-change-city");
 
-      itemCardTarget.addEventListener("click", () => {
+      function setTargetCity(){
         targetChangeCity.textContent = res.name;
         targetCity = {
           id: res.id,
           latitude: res.latitude,
           longitude: res.longitude,
         };
-      });
+      }
 
-      itemCard.addEventListener("click", () => {
-        changeCity.textContent = res.name;
+      itemCardTarget.addEventListener("click", setTargetCity);
+
+      function setSendCity(){
+         changeCity.textContent = res.name;
         sendCity = {
           id: res.id,
           latitude: res.latitude,
           longitude: res.longitude,
         };
-      });
+      }
+      itemCard.addEventListener("click", setSendCity);
     });
   } catch {
     alert("Ошибка");
@@ -194,8 +194,7 @@ async function getTypePackage() {
   }
 }
 
-calcButton.addEventListener("click", () => {
-  calcDelivery();
+function setPackageItem(){
   userData.package = {
     length: lengthDelivery,
     width: widhtDelivery,
@@ -213,14 +212,16 @@ calcButton.addEventListener("click", () => {
     longitude: targetCity.longitude,
   };
   userData.packageId = idPoint 
-  
   userData.senderPointId = sendCity.id
-  
   userData.receiverPointId = targetCity.id
 
-  console.log("12313");
   localStorage.setItem("userData", JSON.stringify(userData));
   location.href = "/src/pages/create-order/step1.html";
+}
+
+calcButton.addEventListener("click", () => {
+  calcDelivery();
+  setPackageItem()
 });
 
 async function calcDelivery() {
@@ -250,7 +251,6 @@ async function calcDelivery() {
     }),
   });
   const result = await response.json();
-  console.log(result, "RESULLLLTT");
   localStorage.setItem(
     "availablelDeliveryTypes",
     JSON.stringify(result.options),
