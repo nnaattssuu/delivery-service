@@ -36,7 +36,7 @@ onMounted()
 }
 
     redirectButton.addEventListener("click",() => {
-        setUpdateReceiverItem
+        setUpdateReceiverItem()
         location.href = "step3.html"
     })
     

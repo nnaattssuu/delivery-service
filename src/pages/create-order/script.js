@@ -69,8 +69,11 @@ function setUpdateReceiverAddres() {
         isNonContact: isNonContactId.checked
     }
     localStorage.setItem("userData", JSON.stringify(userData))
-    location.href = "step6.HTML"
 }
 
-redirectButton.addEventListener("click", () => {setUpdateReceiverAddres()})
-
+function redirectButtonToNextPage(){
+    redirectButton.addEventListener("click", () => {
+        setUpdateReceiverAddres()
+        location.href = "step6.HTML"
+    })
+}

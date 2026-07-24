@@ -31,17 +31,17 @@ function onMounted() {
 }
     onMounted()
 
-function setUpdateSenderItem() {
-    userData.sender = {
-        lastname: lastnameId.value,
-        firstname: firstnameId.value,
-        middlename: middlenameId.value,
-        phone: phonenummerId.value
+    function setUpdateSenderItem() {
+        userData.sender = {
+            lastname: lastnameId.value,
+            firstname: firstnameId.value,
+            middlename: middlenameId.value,
+            phone: phonenummerId.value
+        }
+        localStorage.setItem("userData", JSON.stringify(userData))
     }
-    localStorage.setItem("userData", JSON.stringify(userData))
-}
+    redirectButton.addEventListener("click", () => {
+        setUpdateSenderItem()
+        location.href = "step4.html"
+    })
 
-redirectButton.addEventListener("click", () => {
-    setUpdateSenderItem
-    location.href = "step4.html"
-})
