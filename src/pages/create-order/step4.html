@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery | Шаг 5</title>
-    <link rel="stylesheet" href="/src/pages//create-oreder/styles.css">
+    <title>Delivery | Шаг 4</title>
+    <link rel="stylesheet" href="/src/pages/create-order/styles.css">
     <link rel="stylesheet" href="/src/shared/normalize.css">
 </head>
 <body>
@@ -33,54 +33,37 @@
                 <img src="/assets//icons//vector-right.svg" alt="">
                 <p class="font-headline-delivery">Отправитель</p>
                 <img src="/assets//icons//vector-right.svg" alt="">
-                <p class="font-headline-delivery">Откуда забрать</p>
-                <img src="/assets//icons//vector-right.svg" alt="">
-                <p>Куда доставить</p>
+                <p>Откуда забрать</p>
             </div>
-            <p class="page-title">Куда доставить</p>
-            <p class=" step-title">Шаг 5 из 7</p>
+            <p class="page-title">Откуда забрать</p>
+            <p class=" step-title">Шаг 4 из 7</p>
             <div class="succes">
-                <div class="succes-delivery" style="width: 75%;"></div>
+                <div class="succes-delivery" style="width: 60%;"></div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Улица</p>
-                    <input type="text" class="data-input">
+                    <input type="text" class="data-input" id="street">
                 </div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Дом</p>
-                    <input type="text" class="data-input">
+                    <input type="text" class="data-input" id="house">
                 </div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Квартира</p>
-                    <input type="text" class="data-input">
+                    <input type="text" class="data-input" id="apartment">
                 </div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Заметка для курьера</p>
-                    <input type="text" class="data-input">
+                    <input type="text" class="data-input" id="comment">
                 </div>
             </div>
-            <div class="hook-wrapper">
-                <div class="close-hook">
-                    <p>Бесконтактная доставка</p>
-                    <img src="/assets//icons/cross.svg" alt="" class="close">
-                </div>
-                <p style="opacity: 50%;">Курьер привозит заказ, оставляет его у двери и уходит, а вам приходит уведомление на телефон о том, что заказ доставлен</p>
-            </div>
-            <div class="square"></div>
-                <div class="checkbox-delivery">
-                    <div>
-                        <input type="checkbox" class="check-delivery">
-                    </div>
-                    <p>Оставить заказ у двери</p>
-                    <img src="/assets//icons/iconwrapper.svg" alt="" class="checkbox-wrapper">
-                </div>
             <div class="button-actions active">
                     <button class="action-button active">Назад</button>
                     <button class="action-button" id="button-continue">Продолжить</button>
@@ -89,30 +72,16 @@
         <div class="delivery-wrapper">
                 <p class="heading-text">Ваш заказ</p>
                 <div class="delivery-info">
-                    <p class="delivery-info-label">Тип доставки</p>
-                    <p>Экспресс доставка</p>
                 </div>
                 <div class="delivery-info">
-                    <p class="delivery-info-label">Получатель</p>
-                    <p>Климов Алексей Алексеевич, +7 999 999 99 99</p>
                 </div>
                 <div class="delivery-info">
-                    <p class="delivery-info-label">Отправитель</p>
-                    <p>Иванов Иван Иванович, +7 999 123 45 67</p>
                 </div>
                 <div class="delivery-info">
                     <p class="delivery-info-label">Откуда забрать</p>
-                    <p>г. Москва, ул. Новорогожская, д. 24, кв. 17</p>
-                </div>
-                <div class="delivery-info">
-                    <p class="delivery-info-label">Куда доставить</p>
                     <p>Заполните поля</p>
                 </div>
-                <div class="wrapper-delivery-check">
-                    <p class="delivery-info-label">Примечание</p>
-                    <p>Оставить заказ у двери</p>
-                </div>
             </div>
-            <script src="script.js"></script>
+            <script src="step4.js"></script>
 </body>
 </html>

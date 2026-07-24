@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery | Шаг 2</title>
-    <link rel="stylesheet" href="/src/pages/create-oreder/styles.css">
+    <title>Delivery | Шаг 3</title>
+    <link rel="stylesheet" href="/src/pages/create-order/styles.css">
     <link rel="stylesheet" href="/src/shared/normalize.css">
 </head>
-
 <body>
     <div class="header">
         <div class="logotype">
@@ -16,69 +14,70 @@
             <p>Delivery</p>
         </div>
         <div class="header-actions">
-            <img src="/assets/icons/arrow.svg" alt="" />
-            <img src="/assets/icons/profile.svg" alt="" />
+                <img src="/assets/icons/arrow.svg" alt="" />
+                <img src="/assets/icons/profile.svg" alt="" />
             <div class="sign-out">
                 <button type="submit" class="button-sign-out">Выйти</button>
                 <img src="/assets/icons/icon-sign-out.svg" alt="" />
             </div>
         </div>
     </div>
-    <div class="outer-wrapper">
+     <div class="outer-wrapper">
         <div class="inner-wrapper">
             <div class=" type-delivery">
                 <img src="/assets/icons/house.svg" alt="">
                 <img src="/assets/icons/vector-right.svg" alt="">
                 <p class="font-headline-delivery">Тип доставки</p>
                 <img src="/assets//icons//vector-right.svg" alt="">
-                <p>Получатель</p>
+                <p class="font-headline-delivery">Получатель</p>
+                <img src="/assets//icons//vector-right.svg" alt="">
+                <p>Отправитель</p>
             </div>
-            <p class="page-title">Получатель</p>
-            <p class=" step-title">Шаг 2 из 7</p>
+            <p class="page-title">Отправитель</p>
+            <p class=" step-title">Шаг 3 из 7</p>
             <div class="succes">
-                <div class="succes-delivery" style="width: 25%;"></div>
+                <div class="succes-delivery"></div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Фамилия</p>
-                    <input type="text" placeholder="Иванов" class="data-input">
+                    <input type="text" placeholder="Иванов" class="data-input" id="lastname">
                 </div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Имя</p>
-                    <input type="text" placeholder="Иван" class="data-input">
+                    <input type="text" placeholder="Иван" class="data-input" id="firstname">
                 </div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Отчество</p>
-                    <input type="text" placeholder="Иванович" class="data-input">
+                    <input type="text" placeholder="Иванович" class="data-input" id="middlename">
                 </div>
             </div>
             <div class="data-wrapper">
                 <div class="input-wrapper">
                     <p>Телефон</p>
-                    <input type="text" placeholder="+7" class="data-input">
+                    <input type="text" placeholder="+7 999 123 45 67" class="data-input" id="phonenummer">
                 </div>
             </div>
             <div class="button-actions active">
-                <button class="action-button active">Назад</button>
-                <button class="action-button" id="button-continue">Продолжить</button>
+                    <button class="action-button active">Назад</button>
+                    <button class="action-button" id="button-continue">Продолжить</button>
             </div>
         </div>
         <div class="delivery-wrapper">
-            <p class="heading-text">Ваш заказ</p>
-            <div class="delivery-info">
-                <p class="delivery-info-label">Тип доставки</p>
-                <p>Экспресс доставка</p>
+                <p class="heading-text">Ваш заказ</p>
+                <div class="delivery-info">
+                </div>
+                <div class="delivery-info">
+                </div>
+                <div class="delivery-info">
+                    <p class="delivery-info-label">Отправитель</p>
+                    <p>Заполните поле</p>
+                </div>
             </div>
-            <div class="delivery-info">
-                <p class="delivery-info-label">Получатель</p>
-                <p>Заполните поля</p>
-            </div>
-        </div>
-        <script src="script2.js"></script>
+            <script src="step3.js"></script>
 </body>
-
 </html>
